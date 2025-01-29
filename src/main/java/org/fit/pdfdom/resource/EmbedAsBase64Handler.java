@@ -14,19 +14,18 @@
  *  You should have received a copy of the GNU Lesser General Public License
  *  along with CSSBox. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package org.fit.pdfdom.resource;
 
 import java.io.IOException;
 
-public class EmbedAsBase64Handler implements HtmlResourceHandler
-{
-    public String handleResource(HtmlResource resource) throws IOException
-    {
+public class EmbedAsBase64Handler implements HtmlResourceHandler {
+
+    public String handleResource(HtmlResource resource) throws IOException {
         char[] base64Data = new char[0];
         byte[] data = resource.getData();
-        if (data != null)
+        if (data != null) {
             base64Data = Base64Coder.encode(data);
+        }
 
         return String.format("data:%s;base64,%s", resource.getMimeType(), new String(base64Data));
     }

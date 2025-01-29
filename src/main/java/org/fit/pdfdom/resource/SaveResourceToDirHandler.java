@@ -14,7 +14,6 @@
  *  You should have received a copy of the GNU Lesser General Public License
  *  along with CSSBox. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package org.fit.pdfdom.resource;
 
 import org.apache.commons.io.FileUtils;
@@ -24,28 +23,26 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-public class SaveResourceToDirHandler implements HtmlResourceHandler
-{
+public class SaveResourceToDirHandler implements HtmlResourceHandler {
+
     public static final String DEFAULT_RESOURCE_DIR = "resources/";
 
     private final File directory;
     private List<String> writtenFileNames = new LinkedList<String>();
 
-    public SaveResourceToDirHandler()
-    {
+    public SaveResourceToDirHandler() {
         directory = null;
     }
 
-    public SaveResourceToDirHandler(File directory)
-    {
+    public SaveResourceToDirHandler(File directory) {
         this.directory = directory;
     }
 
-    public String handleResource(HtmlResource resource) throws IOException
-    {
+    public String handleResource(HtmlResource resource) throws IOException {
         String dir = DEFAULT_RESOURCE_DIR;
-        if (directory != null)
+        if (directory != null) {
             dir = directory.getPath() + "/";
+        }
 
         String fileName = findNextUnusedFileName(resource.getName());
         String resourcePath = dir + fileName + "." + resource.getFileEnding();
@@ -58,8 +55,7 @@ public class SaveResourceToDirHandler implements HtmlResourceHandler
         return resourcePath;
     }
 
-    private String findNextUnusedFileName(String fileName)
-    {
+    private String findNextUnusedFileName(String fileName) {
         int i = 1;
         String usedName = fileName;
         while (writtenFileNames.contains(usedName)) {

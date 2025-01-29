@@ -14,17 +14,15 @@
  *  You should have received a copy of the GNU Lesser General Public License
  *  along with CSSBox. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package org.fit.pdfdom.resource;
 
 import java.io.IOException;
 
-public abstract class HtmlResource
-{
+public abstract class HtmlResource {
+
     protected String name;
 
-    public HtmlResource(String name)
-    {
+    public HtmlResource(String name) {
         this.name = name;
     }
 
@@ -34,8 +32,7 @@ public abstract class HtmlResource
 
     public abstract String getMimeType();
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 }

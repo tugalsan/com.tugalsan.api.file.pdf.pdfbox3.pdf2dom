@@ -14,15 +14,13 @@
  *  You should have received a copy of the GNU Lesser General Public License
  *  along with CSSBox. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package org.fit.pdfdom.resource;
 
 import java.io.IOException;
 
-public class IgnoreResourceHandler implements HtmlResourceHandler
-{
-    public String handleResource(HtmlResource resource) throws IOException
-    {
+public class IgnoreResourceHandler implements HtmlResourceHandler {
+
+    public String handleResource(HtmlResource resource) throws IOException {
         return "";
     }
 }

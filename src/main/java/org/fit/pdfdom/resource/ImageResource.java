@@ -14,7 +14,6 @@
  *  You should have received a copy of the GNU Lesser General Public License
  *  along with CSSBox. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package org.fit.pdfdom.resource;
 
 import javax.imageio.ImageIO;
@@ -22,64 +21,54 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-public class ImageResource extends HtmlResource
-{
+public class ImageResource extends HtmlResource {
+
     private final BufferedImage image;
     private double x = 0;
     private double y = 0;
 
-    public ImageResource(String name, BufferedImage image)
-    {
+    public ImageResource(String name, BufferedImage image) {
         super(name);
 
         this.image = image;
     }
 
-    public byte[] getData() throws IOException
-    {
+    public byte[] getData() throws IOException {
         ByteArrayOutputStream buffer = new ByteArrayOutputStream();
         ImageIO.write(image, "PNG", buffer);
 
         return buffer.toByteArray();
     }
 
-    public String getFileEnding()
-    {
+    public String getFileEnding() {
         return "png";
     }
 
-    public String getMimeType()
-    {
+    public String getMimeType() {
         return "image/png";
     }
 
-    public void setX(double x)
-    {
+    public void setX(double x) {
         this.x = x;
     }
 
-    public double getX()
-    {
+    public double getX() {
         return x;
     }
 
-    public void setY(double y)
-    {
+    public void setY(double y) {
         this.y = y;
     }
 
-    public double getY()
-    {
+    public double getY() {
         return y;
     }
 
-    public float getHeight()
-    {
+    public float getHeight() {
         return image.getHeight();
     }
 
-    public float getWidth()
-    {
+    public float getWidth() {
         return image.getWidth();
     }
 }

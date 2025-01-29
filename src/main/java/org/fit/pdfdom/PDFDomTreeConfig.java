@@ -14,7 +14,6 @@
  *  You should have received a copy of the GNU Lesser General Public License
  *  along with CSSBox. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package org.fit.pdfdom;
 
 import org.fit.pdfdom.resource.EmbedAsBase64Handler;
@@ -24,8 +23,8 @@ import org.fit.pdfdom.resource.SaveResourceToDirHandler;
 
 import java.io.File;
 
-public class PDFDomTreeConfig
-{
+public class PDFDomTreeConfig {
+
     private HtmlResourceHandler imageHandler;
     private HtmlResourceHandler fontHandler;
 
@@ -52,23 +51,19 @@ public class PDFDomTreeConfig
     private PDFDomTreeConfig() {
     }
 
-    public HtmlResourceHandler getImageHandler()
-    {
+    public HtmlResourceHandler getImageHandler() {
         return imageHandler;
     }
 
-    public void setImageHandler(HtmlResourceHandler imageHandler)
-    {
+    public void setImageHandler(HtmlResourceHandler imageHandler) {
         this.imageHandler = imageHandler;
     }
 
-    public HtmlResourceHandler getFontHandler()
-    {
+    public HtmlResourceHandler getFontHandler() {
         return fontHandler;
     }
 
-    public void setFontHandler(HtmlResourceHandler fontHandler)
-    {
+    public void setFontHandler(HtmlResourceHandler fontHandler) {
         this.fontHandler = fontHandler;
     }
 }

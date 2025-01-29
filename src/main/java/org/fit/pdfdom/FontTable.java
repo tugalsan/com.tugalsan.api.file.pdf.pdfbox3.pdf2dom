@@ -201,7 +201,7 @@ public class FontTable
 
                 if (fontData.length != 0)
                     return fontData;
-            } catch (Exception ex)
+            } catch (IOException ex)
             {
                 log.warn("Error loading type 0 with ttf descendant font '{}' Message: {} {}",
                         fontName, ex.getMessage(), ex.getClass());
@@ -228,7 +228,7 @@ public class FontTable
                 fileEnding = font.getProperties().getFileEnding();
 
                 return font.getData();
-            } catch (Exception ex) {
+            } catch (IOException ex) {
                 log.error("Issue converting Bare CFF font or the font type is not supportedby Pdf2Dom, " +
                         "Font: {} Exception: {} {}", fontName, ex.getMessage(), ex.getClass());
 
@@ -246,7 +246,7 @@ public class FontTable
                     font.normalize();
 
                 return font.getData();
-            } catch (Exception ex)
+            } catch (IOException ex)
             {
                 log.warn("Error normalizing font '{}' Message: {} {}",
                         fontName, ex.getMessage(), ex.getClass());

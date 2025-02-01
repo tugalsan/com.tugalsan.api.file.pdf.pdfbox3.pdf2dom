@@ -10,5 +10,5 @@ module com.tugalsan.api.file.pdf.pdfbox3.pdf2dom {
     requires com.tugalsan.api.unsafe;
     requires com.tugalsan.api.function;
     exports org.fit.pdfdom;
-    exports org.fit.pdfdom.resource;
+//    exports org.fit.pdfdom.resource;
 }

@@ -166,11 +166,6 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>com.tugalsan.api.unsafe</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
             <artifactId>com.tugalsan.api.file.pdf.pdfbox3.pdf2dom.gfxassert</artifactId>
             <version>1.0.4</version>
         </dependency>
@@ -178,6 +173,11 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>com.tugalsan.api.file.pdf.pdfbox3.pdf2dom.fontverter</artifactId>
             <version>1.2.22</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>com.tugalsan.api.function</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

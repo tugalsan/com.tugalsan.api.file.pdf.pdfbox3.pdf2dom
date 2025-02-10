@@ -19,7 +19,7 @@
  */
 package org.fit.pdfdom;
 
-import com.tugalsan.api.unsafe.client.TGS_UnSafe;
+import com.tugalsan.api.function.client.maythrow.checkedexceptions.TGS_FuncMTCEUtils;
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.Writer;
@@ -63,7 +63,7 @@ public class PDFToHTML {
 
         PDFDomTreeConfig config = parseOptions(args);
 
-        TGS_UnSafe.run(() -> {
+        TGS_FuncMTCEUtils.run(() -> {
             try (var document = Loader.loadPDF(new File(infile))) {
                 try (Writer output = new PrintWriter(outfile, "utf-8")) {
                     PDFDomTree parser = new PDFDomTree(config);

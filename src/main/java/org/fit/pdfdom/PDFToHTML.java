@@ -19,7 +19,7 @@
  */
 package org.fit.pdfdom;
 
-import com.tugalsan.api.function.client.maythrow.checkedexceptions.TGS_FuncMTCEUtils;
+import com.tugalsan.api.function.client.maythrowexceptions.checked.TGS_FuncMTCUtils;
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.Writer;
@@ -63,7 +63,7 @@ public class PDFToHTML {
 
         PDFDomTreeConfig config = parseOptions(args);
 
-        TGS_FuncMTCEUtils.run(() -> {
+        TGS_FuncMTCUtils.run(() -> {
             try (var document = Loader.loadPDF(new File(infile))) {
                 try (Writer output = new PrintWriter(outfile, "utf-8")) {
                     PDFDomTree parser = new PDFDomTree(config);

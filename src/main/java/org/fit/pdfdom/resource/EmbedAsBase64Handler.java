@@ -20,6 +20,7 @@ import java.io.IOException;
 
 public class EmbedAsBase64Handler implements HtmlResourceHandler {
 
+    @Override
     public String handleResource(HtmlResource resource) throws IOException {
         char[] base64Data = new char[0];
         byte[] data = resource.getData();

@@ -28,7 +28,7 @@ public class SaveResourceToDirHandler implements HtmlResourceHandler {
     public static final String DEFAULT_RESOURCE_DIR = "resources/";
 
     private final File directory;
-    private List<String> writtenFileNames = new LinkedList<String>();
+    final private List<String> writtenFileNames = new LinkedList();
 
     public SaveResourceToDirHandler() {
         directory = null;
@@ -38,6 +38,7 @@ public class SaveResourceToDirHandler implements HtmlResourceHandler {
         this.directory = directory;
     }
 
+    @Override
     public String handleResource(HtmlResource resource) throws IOException {
         String dir = DEFAULT_RESOURCE_DIR;
         if (directory != null) {

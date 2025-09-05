@@ -20,6 +20,7 @@ import java.io.IOException;
 
 public class IgnoreResourceHandler implements HtmlResourceHandler {
 
+    @Override
     public String handleResource(HtmlResource resource) throws IOException {
         return "";
     }

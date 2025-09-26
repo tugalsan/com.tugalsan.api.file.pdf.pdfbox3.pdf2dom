@@ -16,10 +16,9 @@
  */
 package org.fit.pdfdom.resource;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
+
+import module java.desktop;
+import java.io.*;
 
 public class ImageResource extends HtmlResource {
 

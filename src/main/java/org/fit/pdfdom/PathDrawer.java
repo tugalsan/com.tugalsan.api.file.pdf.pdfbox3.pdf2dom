@@ -21,9 +21,7 @@ import org.apache.pdfbox.pdmodel.graphics.state.PDGraphicsState;
 import org.fit.pdfdom.resource.ImageResource;
 import org.slf4j.Logger;
 
-import java.awt.*;
-import java.awt.geom.Rectangle2D;
-import java.awt.image.BufferedImage;
+import module java.desktop;
 import java.io.IOException;
 import java.util.List;
 
